@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale (LC_ALL, "ru");
+    cout<<"введите число ";
+    int n, i=0, j, a, b, s;
+    cin>>n;
+
+    int d=n;
+    while (d>0) {
+        i++;
+        d=d/10;
+    }
+    a=n; b=n;
+    for (j=0; j<i; j++)
+        a=a*10;
+    for (j=0; j<i+i; j++)
+        b=b*10;
+    s=n*3+a*2+b;
+
+    cout<<"слагаемые "<<n<<" "<<a+n<<" "<<b+a+n<<endl;
+    cout<<"сумма "<<s;
+
+    return 0;
+
+}
